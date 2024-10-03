@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Car Dealership</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('j.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .contact-section {
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 50px;
+            color: #ff0000;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .form-title {
+            font-size: 40px;
+            color: #ff6600;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 30px;
+            font-weight: 700;
+            border-bottom: 2px solid #ff6600;
+            display: inline-block;
+            padding-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-section p {
+            color: #ce0000;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .contact-box {
+            flex: 1;
+            padding: 20px;
+            background-color: #800000;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-box i {
+            font-size: 36px;
+            color: #ff0000;
+            margin-bottom: 15px;
+        }
+
+        .contact-box h2 {
+            font-size: 22px;
+            color: #000; /* Changed the heading color to black */
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+            color: #fff; /* Changed text color to white */
+            font-size: 16px;
+        }
+
+        .contact-box p a {
+            color: #fff; /* Ensures links are also white */
+            text-decoration: none;
+        }
+
+        .contact-box p a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            margin-bottom: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #b30000;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #800000;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-info,
+        .footer-links,
+        .footer-social,
+        .footer-subscribe {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #ff6600;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .footer-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin: 10px 0;
+        }
+
+        .footer-links a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            text-align: center;
+        }
+
+        .social-media a {
+            color: #fff;
+            background-color: #ff6600;
+            padding: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            font-size: 24px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .social-media a:hover {
+            background-color: #b30000;
+        }
+
+        .footer-subscribe {
+            text-align: center;
+        }
+
+        .footer-subscribe input[type="email"] {
+            padding: 10px;
+            width: 70%;
+            max-width: 300px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .footer-subscribe button {
+            padding: 10px 15px;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .footer-subscribe button:hover {
+            background-color: #b30000;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-bottom p {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .contact-box {
+                margin-bottom: 20px;
+            }
+
+            .contact-title {
+                font-size: 40px;
+            }
+
+            .form-title {
+                font-size: 30px;
+            }
+
+            .contact-section p {
+                font-size: 16px;
+            }
+
+            .contact-form h2 {
+                font-size: 24px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-info,
+            .footer-links,
+            .footer-social,
+            .footer-subscribe {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-section {
+                padding: 30px;
+            }
+
+            .contact-title {
+                font-size: 32px;
+            }
+
+            .form-title {
+                font-size: 26px;
+            }
+
+            .contact-section p {
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .social-media h3 {
+                font-size: 18px;
+            }
+
+            .footer-info h2,
+            .footer-links h2,
+            .footer-social h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="contact-title"><b>Contact Us</b></h1>
+            <p><b>If you have any questions or need assistance, feel free to reach out to us. We're here to help!</b></p>
+
+            <div class="contact-info">
+                <div class="contact-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h2><b>Address</b></h2>
+                    <p><a href="https://www.google.com/maps/search/?api=1&query=Your+Address" target="_blank">123 Car Street, Car City</a></p>
+                </div>
+                <div class="contact-box">
+                    <i class="fas fa-phone-alt"></i>
+                    <h2><b>Phone</b></h2>
+                    <p><a href="tel:+1234567890">+1 234 567 890</a></p>
+                </div>
+                <div class="contact-box">
+                    <i class="fas fa-envelope"></i>
+                    <h2><b>Email</b></h2>
+                    <p><a href="mailto:info@cardealership.com">info@cardealership.com</a></p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2 class="form-title"><b>Get In Touch</b></h2>
+                <form action="your_form_submission_url" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h2>About Us</h2>
+                <p>At our car dealership, we provide quality cars and exceptional service.</p>
+            </div>
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h2>Follow Us</h2>
+                <div class="social-media">
+                    <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://www.youtube.com" target="_blank" class="fab fa-youtube"></a>
+                    <a href="https://www.tiktok.com" target="_blank" class="fab fa-tiktok"></a>
+                    <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://twitter.com" target="_blank" class="fab fa-x"></a>
+                    <a href="https://wa.me/1234567890" target="_blank" class="fab fa-whatsapp"></a> <!-- Updated WhatsApp link -->
+                </div>
+            </div>
+            <div class="footer-subscribe">
+                <h2>Subscribe to Our Newsletter</h2>
+                <input type="email" placeholder="Enter your email" required>
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Car Dealership. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
